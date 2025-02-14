@@ -519,7 +519,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "Strikes the foe with wings\n"
             "spread wide."),
         .effect = EFFECT_HIT,
-        .power = 60,
+        .power = 50, // 60 -> 50
         .type = TYPE_FLYING,
         .accuracy = 100,
         .pp = 35,
@@ -874,8 +874,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "with sharp horns, etc."),
         .effect = EFFECT_MULTI_HIT,
         .power = 15,
-        .type = TYPE_NORMAL,
-        .accuracy = 85,
+        .type = TYPE_FIGHTING, // NORMAL -> FIGHTING
+        .accuracy = 100, // 85 -> 100
         .pp = 20,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
