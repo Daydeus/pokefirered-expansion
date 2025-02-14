@@ -11,7 +11,7 @@
 #define P_UPDATED_EXP_YIELDS        GEN_LATEST  // Since Gen 5, some Pokémon have received base Experience changes.
 
 // Learnsets
-#define P_LVL_UP_LEARNSETS          GEN_LATEST  // Choose which set of Level Up Learnsets to use.
+#define P_LVL_UP_LEARNSETS          GEN_CUSTOM  // Choose which set of Level Up Learnsets to use.
                                                 // For generations that hadn't introduced a species yet, we use their first appearence (eg. Chikorita's Gen2 data if the config is set to GEN_1).
                                                 // For generations that don't include a previously introduced species, we use their last apperance (eg. Snivy's Gen7 data if the config is set to GEN_8).
                                                 // GEN_1/2/3/4/5/6/7: Yellow, Crystal, RSE, HGSS, B2W2, ORAS, USUM learnsets respectively.
@@ -54,12 +54,12 @@
 #define P_EV_CAP                         GEN_LATEST  // Since Gen 6, the max EVs per stat is 252 instead of 255.
 #define P_SHOW_TERA_TYPE                 GEN_8       // Since Gen 9, the Tera Type is shown on the summary screen.
 #define P_TM_LITERACY                    GEN_LATEST  // Since Gen 6, TM illiterate Pokémon can learn TMs that teach moves that are in their level-up learnsets.
-#define P_CAN_FORGET_HIDDEN_MOVE         FALSE       // If TRUE, Pokémon can forget any move, even if it is a Hidden Move.
+#define P_CAN_FORGET_HIDDEN_MOVE         TRUE        // If TRUE, Pokémon can forget any move, even if it is a Hidden Move.
 #define P_EGG_CYCLE_LENGTH               GEN_LATEST  // Since Gen 8, egg cycles take half as many steps as before.
 #define P_ONLY_OBTAINABLE_SHINIES        FALSE       // If TRUE, Pokémon encountered in the Battle Pyramid won't be shiny.
 #define P_NO_SHINIES_WITHOUT_POKEBALLS   FALSE       // If TRUE, Pokémon encountered when the player is out of Poké Balls won't be shiny
 #define P_SHOW_DYNAMIC_TYPES             FALSE       // If TRUE, all moves with dynamic type changes will be reflected as their current type in battle/summary screens instead of just select ones like in vanilla.
-#define P_SUMMARY_SCREEN_MOVE_RELEARNER  TRUE        // If TRUE, shows an option for Pokémon to relearn moves on the summary screen moves page.
+#define P_SUMMARY_SCREEN_MOVE_RELEARNER  FALSE       // If TRUE, shows an option for Pokémon to relearn moves on the summary screen moves page.
 #define P_SUMMARY_MOVE_RELEARNER_FULL_PP TRUE        // If TRUE, the move relearner in the summary screen restores relearned moves' PP to full.
 #define P_SUMMARY_SCREEN_RENAME          TRUE        // If TRUE, an option to change Pokémon nicknames replaces the cancel prompt on the summary screen info page.
 
