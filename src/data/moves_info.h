@@ -1094,7 +1094,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "A toxic attack with barbs,\n"
             "etc., that may poison."),
         .effect = EFFECT_HIT,
-        .power = 15,
+        .power = 35, // 15 -> 35
         .type = TYPE_POISON,
         .accuracy = 100,
         .pp = 35,
@@ -1119,7 +1119,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "Stingers on the forelegs\n"
             "jab the foe twice."),
         .effect = EFFECT_HIT,
-        .power = 25,
+        .power = 40, // 25 -> 40
         .type = TYPE_BUG,
         .accuracy = 100,
         .pp = 20,
