@@ -2011,7 +2011,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .effect = EFFECT_POISON,
         .power = 0,
         .type = TYPE_POISON,
-        .accuracy = 75,
+        .accuracy = 90, // 75 -> 90
         .pp = 35,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
@@ -2035,7 +2035,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .effect = EFFECT_PARALYZE,
         .power = 0,
         .type = TYPE_GRASS,
-        .accuracy = 75,
+        .accuracy = 90, // 75 -> 90
         .pp = 30,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
@@ -2403,7 +2403,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "A psychic attack that may\n"
             "cause confusion."),
         .effect = EFFECT_HIT,
-        .power = 50,
+        .power = 35, // 50 -> 35
         .type = TYPE_PSYCHIC,
         .accuracy = 100,
         .pp = 25,
@@ -2412,7 +2412,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_SPECIAL,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_CONFUSION,
-            .chance = 10,
+            .chance = 20, // 10 -> 20
         }),
         .contestEffect = CONTEST_EFFECT_STARTLE_PREV_MON,
         .contestCategory = CONTEST_CATEGORY_SMART,

@@ -67,6 +67,25 @@ static const u16 sSquirtleEggMoveLearnset[] = {
 };
 #endif //P_FAMILY_SQUIRTLE
 
+#if P_FAMILY_CATERPIE
+static const u16 sCaterpieEggMoveLearnset[] = {
+    MOVE_ACID,
+    MOVE_BATON_PASS,
+    MOVE_BUG_BITE,
+    MOVE_CONFUSE_RAY,
+    MOVE_ELECTROWEB,
+    MOVE_FORESIGHT,
+    MOVE_LEECH_LIFE,
+    MOVE_MAGICAL_LEAF,
+    MOVE_SIGNAL_BEAM,
+    MOVE_SILK_TRAP,
+    MOVE_STICKY_WEB,
+    MOVE_SUPERSONIC,
+    MOVE_VENOSHOCK,
+    MOVE_UNAVAILABLE,
+};
+#endif //P_FAMILY_CATERPIE
+
 #if P_FAMILY_WEEDLE
 static const u16 sWeedleEggMoveLearnset[] = {
     MOVE_BATON_PASS,
@@ -84,7 +103,7 @@ static const u16 sWeedleEggMoveLearnset[] = {
     MOVE_TOXIC_THREAD,
     MOVE_UNAVAILABLE,
 };
-#endif //P_FAMILY_PIDGEY
+#endif //P_FAMILY_WEEDLE
 
 #if P_FAMILY_PIDGEY
 static const u16 sPidgeyEggMoveLearnset[] = {
