@@ -5509,8 +5509,6 @@ extern const u16 gNamingScreenUnderscore_Gfx[];
 extern const u32 gPokeStorageMenu_Gfx[];
 extern const u32 gPokeStoragePartyMenu_Tilemap[];
 extern const u16 gPokeStoragePartyMenu_Pal[];
-extern const u16 gPokeStorageInterface_Pal[];
-extern const u16 gPokeStorageInterface_NoDisplayMon_Pal[];
 
 // pokedex_screen
 extern const u16 gDexScreen_TopMenuIconPals_AtoZ[];
@@ -6335,6 +6333,10 @@ extern const u32 gBattleAnimSpritePal_IvyCudgelRock[];
 extern const u32 gBattleAnimSpritePal_IvyCudgelWater[];
 extern const u32 gBattleAnimSpriteGfx_PinkVioletOrb[];
 extern const u32 gBattleAnimSpritePal_PinkVioletOrb[];
+extern const u32 gBattleAnimSpriteGfx_TeraStarstormBeam[];
+extern const u32 gBattleAnimSpritePal_TeraStarstormBeam[];
+extern const u32 gBattleAnimSpriteGfx_SaltParticle[];
+extern const u32 gBattleAnimSpritePal_SaltParticle[];
 
 extern const u32 gBattleAnimBgImage_Dark[];
 extern const u32 gBattleAnimBgImage_Ghost[];

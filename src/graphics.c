@@ -993,6 +993,12 @@ const u32 gBattleAnimSpritePal_Meteor[] = INCBIN_U32("graphics/battle_anims/spri
 const u32 gBattleAnimSpriteGfx_FlatRock[] = INCBIN_U32("graphics/battle_anims/sprites/flat_rock.4bpp.lz");
 const u32 gBattleAnimSpritePal_FlatRock[] = INCBIN_U32("graphics/battle_anims/sprites/flat_rock.gbapal.lz");
 
+const u32 gBattleAnimSpriteGfx_TeraStarstormBeam[] = INCBIN_U32("graphics/battle_anims/sprites/starstorm_beam.4bpp.lz");
+const u32 gBattleAnimSpritePal_TeraStarstormBeam[] = INCBIN_U32("graphics/battle_anims/sprites/starstorm_beam.gbapal.lz");
+
+const u32 gBattleAnimSpriteGfx_SaltParticle[] = INCBIN_U32("graphics/battle_anims/sprites/salt_particle.4bpp.lz");
+const u32 gBattleAnimSpritePal_SaltParticle[] = INCBIN_U32("graphics/battle_anims/sprites/salt_particle.gbapal.lz");
+
 const u16 gPPTextPalette[] = INCBIN_U16("graphics/interface/text_pp.gbapal");
 
 #include "data/graphics/trainers.h"
@@ -1297,8 +1303,6 @@ const u16 gDexScreen_TopMenuIconPals_AtoZ[] = INCBIN_U16("graphics/pokedex/cat_i
 const u32 gDexScreen_TopMenuIconTiles_AtoZ[] = INCBIN_U32("graphics/pokedex/cat_icon_abc.4bpp.lz");
 
 const u16 gPokeStoragePartyMenu_Pal[] = INCBIN_U16("graphics/pokemon_storage/party_menu.gbapal");
-const u16 gPokeStorageInterface_Pal[] = INCBIN_U16("graphics/pokemon_storage/interface.gbapal");
-const u16 gPokeStorageInterface_NoDisplayMon_Pal[] = INCBIN_U16("graphics/pokemon_storage/interface_no_display_mon.gbapal");
 const u32 gPokeStorageMenu_Gfx[] = INCBIN_U32("graphics/pokemon_storage/menu.4bpp.lz");
 const u32 gPokeStoragePartyMenu_Tilemap[] = INCBIN_U32("graphics/pokemon_storage/party_menu.bin.lz");
 const u16 gMonMarkingsMenu_Pal[] = INCBIN_U16("graphics/misc/markings2.gbapal");
