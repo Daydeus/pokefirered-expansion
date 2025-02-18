@@ -797,20 +797,23 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_SAND_ATTACK] =
     {
-        .name = COMPOUND_STRING("Sand Attack"),
+        .name = COMPOUND_STRING("Pocket Sand"),
         .description = COMPOUND_STRING(
-            "Reduces the foe's accuracy\n"
-            "by hurling sand in its face."),
+            "A 1st-turn, 1st-strike move\n"
+            "that causes flinching."),
         .effect = EFFECT_ACCURACY_DOWN,
-        .power = 0,
+        .power = 40,
         .type = TYPE_GROUND,
         .accuracy = 100,
-        .pp = 15,
+        .pp = 10,
         .target = MOVE_TARGET_SELECTED,
-        .priority = 0,
-        .category = DAMAGE_CATEGORY_STATUS,
+        .priority = 3,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_FLINCH,
+            .chance = 100,
+        }),
         .zMove = { .effect = Z_EFFECT_EVSN_UP_1 },
-        .magicCoatAffected = TRUE,
         .contestEffect = CONTEST_EFFECT_STARTLE_MON_WITH_JUDGES_ATTENTION,
         .contestCategory = CONTEST_CATEGORY_CUTE,
         .contestComboStarterId = COMBO_STARTER_SAND_ATTACK,
@@ -1745,9 +1748,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "A reckless body slam that\n"
             "also hurts the user."),
         .effect = EFFECT_HIT,
-        .power = 80,
+        .power = 80, // 80 -> 90
         .type = TYPE_FIGHTING,
-        .accuracy = 80,
+        .accuracy = 100, // 80 -> 100
         .pp = B_UPDATED_MOVE_DATA >= GEN_6 ? 20 : 25,
         .recoil = 25,
         .target = MOVE_TARGET_SELECTED,
@@ -3379,7 +3382,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "Constricts to inflict pain.\n"
             "May lower Speed."),
         .effect = EFFECT_HIT,
-        .power = 10,
+        .power = 40, // 10 -> 40
         .type = TYPE_NORMAL,
         .accuracy = 100,
         .pp = 35,
@@ -3389,7 +3392,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .makesContact = TRUE,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_SPD_MINUS_1,
-            .chance = 10,
+            .chance = 30, // 10 -> 30
         }),
         .contestEffect = CONTEST_EFFECT_STARTLE_PREV_MON,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
@@ -4813,7 +4816,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "Hurls mud in the foe's face\n"
             "to reduce its accuracy."),
         .effect = EFFECT_HIT,
-        .power = 20,
+        .power = 35, // 20 -> 35
         .type = TYPE_GROUND,
         .accuracy = 100,
         .pp = 10,
@@ -4822,7 +4825,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .category = DAMAGE_CATEGORY_SPECIAL,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_ACC_MINUS_1,
-            .chance = 100,
+            .chance = 30, // 100 -> 30
         }),
         .contestEffect = CONTEST_EFFECT_STARTLE_MON_WITH_JUDGES_ATTENTION,
         .contestCategory = CONTEST_CATEGORY_CUTE,
@@ -10683,9 +10686,9 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             "Throws a blob of mud to\n"
             "damage and cut accuracy."),
         .effect = EFFECT_HIT,
-        .power = 65,
+        .power = 75, // 65 -> 75
         .type = TYPE_GROUND,
-        .accuracy = 85,
+        .accuracy = 90, // 85 -> 90
         .pp = 10,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
