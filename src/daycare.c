@@ -1061,6 +1061,26 @@ u8 GetEggMovesBySpecies(u16 species, u16 *eggMoves)
     return numEggMoves;
 }
 
+u8 GetWildEggMoves(u16 species, u16 *eggMoves)
+{
+    u16 numEggMoves;
+    u16 eggSpecies;
+    u32 i;
+    const u16 *eggMoveLearnset;
+
+    numEggMoves = 0;
+    eggSpecies = GetEggSpecies(species);
+    eggMoveLearnset = GetSpeciesEggMoves(eggSpecies);
+
+    for (i = 0; eggMoveLearnset[i] != MOVE_UNAVAILABLE; i++)
+    {
+        eggMoves[i] = eggMoveLearnset[i];
+        numEggMoves++;
+    }
+
+    return numEggMoves;
+}
+
 static void BuildEggMoveset(struct Pokemon *egg, struct BoxPokemon *father, struct BoxPokemon *mother)
 {
     u16 numSharedParentMoves;

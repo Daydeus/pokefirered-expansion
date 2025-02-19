@@ -32,6 +32,7 @@ u8 GetEggStepsToSubtract(void);
 bool8 ShouldEggHatch(void);
 u8 GetEggCyclesToSubtract(void);
 u8 GetEggMovesBySpecies(u16 species, u16 *eggMoves);
+u8 GetWildEggMoves(u16 species, u16 *eggMoves);
 void StorePokemonInDaycare(struct Pokemon *mon, struct DaycareMon *daycareMon);
 
 #endif // GUARD_DAYCARE_H

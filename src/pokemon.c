@@ -12,6 +12,7 @@
 #include "battle_tower.h"
 #include "battle_z_move.h"
 #include "data.h"
+#include "daycare.h"
 // #include "dexnav.h"
 #include "event_data.h"
 #include "event_object_movement.h"
@@ -1441,6 +1442,21 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
     }
 
     GiveBoxMonInitialMoveset(boxMon);
+
+    // Wild Mon have a P_WILD_EGG_MOVE_CHANCE of knowing an egg move.
+    if (otIdType == OT_ID_PLAYER_ID && Random() % 100 < P_WILD_EGG_MOVE_CHANCE)
+    {
+        u16 eggMoves[20];
+        u16 numEggMoves;
+        u16 moveToLearn;
+
+        numEggMoves = GetWildEggMoves(species, eggMoves);
+
+        moveToLearn = eggMoves[Random() % numEggMoves];
+
+        if (GiveMoveToBoxMon(boxMon, moveToLearn) == MON_HAS_MAX_MOVES)
+            DeleteFirstMoveAndGiveMoveToBoxMon(boxMon, moveToLearn);
+    }
 }
 
 void CreateMonWithNature(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV, u8 nature)
